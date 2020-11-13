@@ -5,11 +5,11 @@
 | consideration   | 배려사항   |
 | glossary   | 용어 사전   |
 | coverage   | 범위   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| integrity   | 무결성   |
+| alteration   | 변화   |
+| inconsistency   | 불일치, 모순   |
+| compliants   | 순응하는   |
+| comprehensive   | 종합적인   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
