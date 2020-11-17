@@ -40,22 +40,22 @@
 | availability   | 유효성   |
 | redundancy   | 중복   |
 | errant   | 잘못된   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| nevertheless   | 그럼에도 불구하고   |
+| primitive   | 기초요소   |
+| hinge on   | 전적으로 달려있다.   |
+| archival   | 기록   |
+| coherence   | 일관성   |
+| peculiarity   | 기벽   |
+| relinquish   | 포기하다.   |
+| prone to   | ~하는 경향이 있는   |
+| parlance   | 말투   |
+| emulation   | 모방   |
+| proprietary   | 소유자의   |
+| infrared   | 적외선의   |
+| rudimentary   | 가장 기초적인   |
+| notion   | 개념   |
+| awkward   | 어색한   |
+| batch   | 묶음   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
