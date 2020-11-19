@@ -56,8 +56,8 @@
 | notion   | 개념   |
 | awkward   | 어색한   |
 | batch   | 묶음   |
-| Content   | Content   |
-| Content   | Content   |
+| discern   | 구별하다.   |
+| argue   | 입증하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
