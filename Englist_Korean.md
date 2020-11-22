@@ -58,16 +58,16 @@
 | batch   | 묶음   |
 | discern   | 구별하다.   |
 | argue   | 입증하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| accordingly   | 그에 맞춰   |
+| infringement   | 위반   |
+| vantage   | 우세   |
+| reconfigure   | 변경하다   |
+| suite   | 모음   |
+| facet   | 측면   |
+| barometric   | 기압   |
+| configuration   | 환경설정   |
+| eligible   | 가질수 있는   |
+| port   | 복사하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
