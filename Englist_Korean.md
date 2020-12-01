@@ -93,11 +93,11 @@
 | rendezvous   | 만남   |
 | trivial   | 사소한   |
 | merely   | 고작   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| indefinite   | 무기한의   |
+| pending   | 기다리는   |
+| conduit   | 전달자   |
+| marshal   | 모으다   |
+| per se   | 그자체로는   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
