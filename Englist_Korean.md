@@ -98,7 +98,7 @@
 | conduit   | 전달자   |
 | marshal   | 모으다   |
 | per se   | 그자체로는   |
-| Content   | Content   |
+| scheme   | 계획   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
