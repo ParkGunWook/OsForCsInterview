@@ -99,13 +99,13 @@
 | marshal   | 모으다   |
 | per se   | 그자체로는   |
 | scheme   | 계획   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| outline   | 개요를 말하다   |
+| comprise   | 구성하다.   |
+| leverage   | 영향력   |
+| empirically   | 경험적으로   |
+| gauging   | 검량하는   |
+| interleave   | 끼우다.   |
+| shortcoming   | 결점   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
