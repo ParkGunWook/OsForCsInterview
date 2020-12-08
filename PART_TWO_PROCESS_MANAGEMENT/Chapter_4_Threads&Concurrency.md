@@ -151,3 +151,70 @@ Phtread와 비슷하게 데이터는 전역으로 선언된 스레드를 통해�
 
 `WaitForMultipleObjects(N, THandles, TRUE, INFINITE);`
 
+### 4.4.3 JAVA 스레드
+
+스레드들은 자바프로그램에서 프로그램 실행의 기초 모델이다. 자바와 그것의 API는 스레드의 관리와 생성에 대해서 풍부한 기능을 제공한다. 모든 자바 프로그램들은 스레드 하나하나의 통제로 이루어져있고 심지어 JVM에서의 메인도 하나의 스레드이다. 자바 스레드들은 윈도우, 리눅스 macOS를 포함하는 JVM에서 어떤 시스템에서도 실행된다. 자바 스레드 API는 안드로이드 앱에서도 가능하다.
+
+자바 프로그램에서 스레드를 만드는 두가지 기술이 있다. 한가지는 Thread 클래스로부터 새로운 클래스를 만들고 그것의 run() 메서드를 오버라이드하는 것이다. 다른 방법은 Runnable 인터페이스를 정의하는 것이다. 이 인터페이스는 한가지 추상 메서드를 public void run()으로 정의하는 것이다. run() 메서드의 코드는 Runnalble을 구현했고 분리된 스레드로 작동한다. 예시는 다음과 같다.
+
+```java
+class Task implements Runnable
+{
+    public void run() {
+        System.out.println("I am a thread.");
+    }
+}
+```
+
+자바에서의 스레드 생성은 스레드 오브젝트 만드는 것과 그것을 Runnable을 구현하는 클래스의 인스턴스에게 넘기는 것을 포함하는데, start() 메소드를 실행하는 것부터 시작한다. 다음과 같다.
+```java
+Thread worker = new Thread(new Task());
+worker.start();
+```
+
+새로운 스레드 오브젝트를 위해서 start() 메소드 호출은 2가지 일을 한다.
+
+1. 그것은 JVM에 새로운 스레드를 초기화하고 메모리를 할당한다.
+2. run() 메서드를 호출하고, JVM에 의해서 돌아가는 스레드를 만든다.(우리는 run() 메서드를 직접 부르지 않는다. 대신에, 우리는 start() 메서드를 부르고 그것이 run() 메서드를 실행한다.)
+
+Pthreads와 윈도우 라이브러에서의 부모 스레드는 pthread_join()과 waitForSingleObject()를 스레드가 서메이션을 끝날때까지 기다리게한다. join() 메서드가 자바에서는 비슷하게 제공된다.(join(0)은 InterruptedException을 throw하고 우리는 무시하도록 선택가능하다.)
+
+```java
+try {
+    worker.join();
+}
+catch(InterruptedExcption ie) { }
+```
+
+만약 부모가 반드시 스레드의 종료까지 기다려야하면 우리는 for 루프를 비슷하게 이용할 수 있다.
+
+### 4.4.3 자바 Excutor Framework
+
+자바는 스레드를 우리가 앞서 말한것으로 구현가능했다. 그러나 1.5버전과 API가 소개되면서 새로운 방법이 우리에게 주어졌다. 이러한 툴은 java.util.concurrent 패키지에 존재한다.
+
+스레드 오브젝트를 만드는 것보다는, 스레드 생성은 대신에 Executor 인터페이스를 만든다.
+
+```java
+public interface Excutor
+{
+    void execute(Runnable command);
+}
+```
+
+이 인터페이스를 구현하는 클래스는 반드시 execute(0)를 정의하고 Runnable 오브젝트에 의해서 건내져야한다. 자바 개발자에게, 이것은 Executor을 사용하는 것보다는 분리된 스레드를 만드는 것이고 start() 메서드를 호출한다. Executor은 다음과 같다.
+
+```java
+Executor service = new Executor;
+service.execute(new Task());
+```
+Executor 프레임워크는 생산자-소비자 모델을 기초로 한다. Runnable 인터페이스를 구현한 태스크는 생산되고 이런 태스크를 소비하는 스레드를 가진다. 이 접근의 장점은 스레드 생성을 실행과 나눌뿐만이 아니라 현재 실행중인 태스크간의 통신 메커니즘을 제공한다.
+
+스레드간의 데이터 공유는 윈도우와 Pthreads 사이에서 쉽게 가지는데, 공유 데이터가 전역으로 선언되기 때문이다. 순수한 OOL에서는, 자바는 전역이라는 정의가 없다. 우리는 Runnable을 통해서 파라미터를 전할수 있다. 그러나 자바 스레드는 결과를 리턴할 수 없다. 이런 필요를 충족하기 위해서 java.util.concurrent 패키지는 Callable 인터페이스를 추가로 정의해서 Runnable이 결과를 리턴하는 것을 돕는다. 예시코드는 이 기능을 이용한다.
+
+서메이션 클래스는 Callable 인터페이스를 구현한다. 그것은 call() 메서드이고 여기서 분리된 스레드에서 실행되는 call() 메서드이다. 이 코드를 실행할려면, 우리는 newSingleThreadExecutor 오브젝트를 만들고, ExecutorService의 종류이고 submit 메서드를 사용하는 callable 메서드이다.(execute와 submit의 큰 차이는 결과를 리턴하지않는다와 한다이다.) 한번 우리가 callable 태스크를 스레드에 제출하면, 우리는 그것의 get() 메서드를 불러서 Future 오브젝트가 리턴되는 것을 기다린다.
+
+단순하게 스레드를 만들고 그것의 종료를 조인하는 것보다 어려워 보일수도 있다. 그러나 이 방법을 하는 것은 문제의 단계에 이득을 준다. 우리가 보았듯이, Callable과 Future은 스레드가 결과를 리턴하는 것을 허용한다.
+
+추가적으로, 이런 접근은 그들이 만드는 결과와 스레드의 생성을 분할한다. 결과가 나오기까지 스레드를 기다리는 것보다는, 부모가 대신에 결과물이 생길떄까지 기다리는 것이다. 마지막으로, 4.5.1절에서, 이 프레임워크는 많은 수의 스레드 관리를 위한 단단한 기능을 제공한다.
+
+## 4.5 Implicit Threading

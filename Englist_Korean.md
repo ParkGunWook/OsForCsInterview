@@ -106,8 +106,8 @@
 | gauging   | 검량하는   |
 | interleave   | 끼우다.   |
 | shortcoming   | 결점   |
-| Content   | Content   |
-| Content   | Content   |
+| confer   | 수여하다   |
+| robust   | 단단한   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
