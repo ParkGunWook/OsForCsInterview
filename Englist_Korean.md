@@ -108,12 +108,12 @@
 | shortcoming   | 결점   |
 | confer   | 수여하다   |
 | robust   | 단단한   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| trivial   | 사소한   |
+| undertaking   | 일   |
+| heuristically   | 경험적으로, 발견을 돕게   |
+| characterized   | 특정짓는   |
+| wherein   | 어디에서   |
+| synthetically   | 종합적으로   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |

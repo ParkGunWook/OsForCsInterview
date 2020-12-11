@@ -1,5 +1,3 @@
-package os_helper;
-
 import java.util.concurrent.*;
 
 class Summation implements Callable<Integer>
@@ -16,7 +14,6 @@ class Summation implements Callable<Integer>
 		return new Integer(sum);
 	}
 }
-
 
 public class Driver {
 	public static void main(String[] args) {
