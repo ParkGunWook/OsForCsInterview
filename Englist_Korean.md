@@ -114,12 +114,12 @@
 | characterized   | 특정짓는   |
 | wherein   | 어디에서   |
 | synthetically   | 종합적으로   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| underlying   | 밑에 있는   |
+| precedence   | 우선   |
+| semantics   | 의미   |
+| midst   | 한가운데   |
+| invocation   | 발동   |
+| coordiantion   | 조정   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
