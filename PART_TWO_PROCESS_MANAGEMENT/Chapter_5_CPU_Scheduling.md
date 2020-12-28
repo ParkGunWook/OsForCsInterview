@@ -121,4 +121,5 @@ SJF는 주어진 일련의 프로세스에 대해서 최소의 평균 대기시�
 비록 SJF 알고리즘이 이상적이지만, 그것은 CPU 스케쥴링으로 구현이 불가한데, CPU 버스트의 길이를 알수있는 방법이 없기 때문이다. 한가지 문제를 해결하는 방법은 SJF 스케쥴링을 근사화하는 것이다. 우리는 다음 CPU 버스트의 길이는 모르지만, 예측하는 것은 가능하다. 우리는 CPU의 버스트를 이전의 것과 비교해서 예측한다. 다음 CPU 버스트의 길이 근사화 계산으로, 우리는 예측된 가장 짧은 CPU 버스트를 얻을 수 있다.
 
 다음 CPu 버스트는 보통 **exponential average**로 예측된다.
-![sjf_time_cal.png](\image\sjf_time_cal.png)
+
+![sjf_time_cal.png](.\image\sjf_time_cal.png)
