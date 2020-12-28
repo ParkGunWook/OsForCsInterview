@@ -122,4 +122,4 @@ SJF는 주어진 일련의 프로세스에 대해서 최소의 평균 대기시�
 
 다음 CPu 버스트는 보통 **exponential average**로 예측된다.
 
-![sjf_time_cal.png](./image/sjf_time_cal.png)
+![sjf_time_cal.png](.\image\sjf_time_cal.png)
