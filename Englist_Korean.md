@@ -121,8 +121,8 @@
 | invocation   | 발동   |
 | coordiantion   | 조정   |
 | interchangeably   | 교체할수있는   |
-| degenerate   | 악화되다.   |
-| Content   | Content   |
+| degenerate   | 퇴보되다.   |
+| indefinite   | 무기한의, 정해지지 않은   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
