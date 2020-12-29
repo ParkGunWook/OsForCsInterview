@@ -120,8 +120,8 @@
 | midst   | 한가운데   |
 | invocation   | 발동   |
 | coordiantion   | 조정   |
-| Content   | Content   |
-| Content   | Content   |
+| interchangeably   | 교체할수있는   |
+| degenerate   | 악화되다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
