@@ -123,13 +123,13 @@
 | interchangeably   | 교체할수있는   |
 | degenerate   | 퇴보되다.   |
 | indefinite   | 무기한의, 정해지지 않은   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| downfall   | 몰락   |
+| interleaved   | 끼우다   |
+| granularity   | 낱알   |
+| affinity   | 관련성   |
+| veer   | 방향을 확틀다.   |
+| mandate   | 명령하다.   |
+| deem   | 여기다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
