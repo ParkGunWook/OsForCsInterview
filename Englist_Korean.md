@@ -130,13 +130,13 @@
 | veer   | 방향을 확틀다.   |
 | mandate   | 명령하다.   |
 | deem   | 여기다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| rationale   | 이유   |
+| appeal   | 매력   |
+| conjunction   | 결합   |
+| grant   | 승인하다   |
+| overhaul   | 앞지르다.   |
+| metric   | 미터법   |
+| reluctant   | 꺼려하는   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
