@@ -2,7 +2,7 @@
 | ------------- | ------------- |
 | prevalent   | 널리 퍼진   |
 | predominantly   | 우세한   |
-| consideration   | 배려사항   |
+| consideration   | 고려사항   |
 | glossary   | 용어 사전   |
 | coverage   | 범위   |
 | integrity   | 무결성   |
@@ -137,12 +137,12 @@
 | overhaul   | 앞지르다.   |
 | metric   | 미터법   |
 | reluctant   | 꺼려하는   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| unless   | ~하지 않는한   |
+| intervention   | 중재   |
+| entitlement   | 자격   |
+| furthermore   | 더욱이   |
+| tractable   | 다루기 쉬운   |
+| circumvent   | 피하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
