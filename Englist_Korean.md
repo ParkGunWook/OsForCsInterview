@@ -143,9 +143,9 @@
 | furthermore   | 더욱이   |
 | tractable   | 다루기 쉬운   |
 | circumvent   | 피하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| fine-tune   | 미세조정   |
+| subject to   | ~하는 조건으로   |
+| yield   | 양보하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
