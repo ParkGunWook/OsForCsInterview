@@ -146,8 +146,8 @@
 | fine-tune   | 미세조정   |
 | subject to   | ~하는 조건으로   |
 | yield   | 양보하다.   |
-| Content   | Content   |
-| Content   | Content   |
+| thereby   | 그렇게 함으로서   |
+| assert   | 주장하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |

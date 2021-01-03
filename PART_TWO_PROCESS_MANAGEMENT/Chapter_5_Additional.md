@@ -9,3 +9,7 @@
 ## critical real time process ??
 
 ## hard/soft real-time system/process
+
+## What is daemon
+
+## What is terminal I/O
