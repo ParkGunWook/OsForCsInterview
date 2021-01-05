@@ -148,11 +148,11 @@
 | yield   | 양보하다.   |
 | thereby   | 그렇게 함으로서   |
 | assert   | 주장하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| immaterial   | 중요하지 않은   |
+| operand   | 피연산 함수   |
+| incorporate   | 포함하다.   |
+| argument   | 논쟁   |
+| compromise   | 타협   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
