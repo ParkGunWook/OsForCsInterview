@@ -153,9 +153,9 @@
 | incorporate   | 포함하다.   |
 | argument   | 논쟁   |
 | compromise   | 타협   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| coordinate   | 조직화하다   |
+| daunting   | 주눅들게하는, 벅찬   |
+| optimistic   | 낙관적인   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
