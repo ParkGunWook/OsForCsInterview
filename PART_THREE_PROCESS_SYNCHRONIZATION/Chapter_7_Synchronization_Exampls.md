@@ -364,3 +364,175 @@ pthread_cond_signal()은 뮤텍스락을 해제하지 않는 것이 중요하다
 
 우리는 이 챕터에 pthreads 뮤텍스락과 컨디션 변수와 세마포에 관한 몇가지 프로그램 문제와 프로젝트를 제공했다.
 
+## 7.4 자바에서의 동기화
+
+자바 언어와 그것의 API는 만들어졌을때부터 스레드 동기화에 대한 풍부한 지원이 있었다. 이 절에서는, 우리는 자바 모니터, 자바의 기본 동기화 메커니즘을 제공하겠다. 그리고 1.5버전에서 소개된 3가지 추가 메커니즘을 보이겠다.(reentrant locks, semaphores, condition variables) 우리는 그들이 가장 보편적인 라ㅏ킹과 동기화 메커니즘을 나타내므로 포함했다. 그러나, 자바 API는 이 책 이외에도 많은 동기화 기능을 제공한다.(아토믹 변수와 CAS 등은 bibliography에 더 정보가 있다.)
+
+### 7.4.1 자바 모니터
+
+자바는 스레드 동기화를 위해서 모니터 같은 동기화 메커니즘을 제공한다. 우리는 이 메커니즘은 BoundedBuffer class라고 말하고 바운디드 버퍼 문제인 insert()와 remove() 메서드를 개별적으로 실행하는 소비자-생산자 문제에서의 해결책으로 구현된다.
+
+자바의 모든 객체는 그것을 싱글 락과 연관 짓는다. 메서드가 synchronized라고 선언되면, 객체를 락하기 위한 메서드를 가지게 된다. 우리는 *synchronized* 키워드를 메서드 정의에 정의함으로서 동기화한다. 마치 insert()와 remove()를 클래스안에 선언하는 것과 같다.
+
+동기화 메서드를 실행하는 것은 바운디드 버퍼의 객체 인스턴스 락을 가지는 것을 필요로한다. 만약 락이 이미 다른 스레드에게 소유당했으면, synchoronized 메서드가 스레드 호출을 블락하고 다른 객체의 락을 위해서 **entry set**에 둔다. 엔트리 집합은 락이 가용해지기를 기다리는 스레드의 집합이다. 만약 synchronized 메서드가 불렸을때 락이 가용하면, 스레드는 객체의 락의 주인이 되고 메서드로 들어갈 수 있다. 락은 스레드가 메서드를 탈출할때 해제된다. 만약 락을 해제할 떄 엔트리 셋이 비지 않았으면, JVM은 임의로 셋에서 한가지 스레드를 골라서 락의 주인으로 만든다.(여기서 임의란, 집합이 특정한 순서로 구성될 필요가 없다는 것이고, 실제로는 FIFO구조를 가진다.)
+
+락을 가지는 것뿐만 아니라, 모든 객체는 스레드의 집합을 포함하는 **wait set**과 연관된다. 스레드가 synchronized 메서드에 입장하면, 그것은 객체의 락을 가진다. 그러나, 이 스레드는 일부 컨디션이 만족되지 않아서 진행할수 없다는 것을 알게된다. 그것이 일어나면, 예를 들어서, 만약 생산자가 insert() 메서드를 불렀지만, 버퍼가 가득찬 것이다. 그 스레드는 락을 해제하고 상황이 만족될때까지 기다린다. 
+
+스레드가 wait() 메서드를 부르면 다음 상황이 일어난다.
+1. 스레드가 객체를 위한 락을 해제한다.
+2. 스레드의 상태가 블락된다.
+3. 스레드는 객체의 대기 집합에 위치된다.
+   
+만약 생산자가 insert() 메서드를 부르고 버퍼가 가득차면, 그것은 wait() 메서드를 부른다. 이 콜은 락을 해제하고, 생산자를 블락하고, 생산자를 대기 집합에 둔다. 생산자가 락을 해제하였기 때문에, 소비자는 반드시 remove() 메서드에 들어가고 생산자를 위해서 버퍼에 빈공간을 만들어 줄 것이다. 
+
+어떻게 소비자 스레드가 생산자에게 진행하라고 시그널을 보낼까? 일반적으로, 스레드가 synchronized 메서드를 나가면, 떠나는 스레드는 객체와 연관된 락을 해제하고, 스레드를 엔트리 셋에서 지우고 락의 권한을 그것에게 주는 것이다. 그러나, insert()와 remove() 메서드의 끝에는, 우리는 notify()라는 메서드가 있다. 이것은 다음과 같은 작업을 한다.
+1. 대기 셋의 스레드에서 임의의 스레드 T를 선택한다.
+2. T를 엔트리 셋으로 이동시킨다.
+3. T의 상태를 블락에서 러너블로 변경한다.
+
+T는 이제 락을 획득하기 위해서 다른 스레드와 경쟁할수 있게되었다. T가 한번 락의 컨트롤을 얻게되면, 그것은 wait()를 부른 시점으로 돌아가고, count를 다시한번 체크한다. 
+
+다음으로, 우리는 wait()와 notify() 메서드를 보이겠다. 우리는 버퍼가 가득찼고 객체를 위한 락이 존재한다.
+
+- 생산자는 insert() 메서드를 호출하고 락이 유효한지 확인하고 메서드에 들어간다. 한번 메서드에 들어가면, 생산자는 버퍼가 가득찼다면 wait()를 호출한다. wait()은 락을 해제하고, 생산자의 상태를 블락으로 바꾸고, 생산자를 대기 셋에 둔다.
+- 소비자는 락이 유효하면 remove() 메서드를 부르고 들어간다. 그 소비자는 버퍼에서 아이템을 삭제하고 notify()를 부른다. 아직 소비자가 객체를 위한 락을 가지고 있다.
+- notify()가 생산자를 대기 셋에서 엔트리셋으로 바꾸고, 생산자의 상태는 러너블이 된다.
+- 생산자는 락을 가지려고 시도하고 성공했다. 그것은 wait() 콜부터 실행을 다시한다. 생산자는 while()루프를 확인하고, 버퍼에 공간이 있다면 insert() 메서드의 나머지 부분을 실행한다. 만약 아무런 스레드가 대기 셋에서 기다리지 않으면, notify()는 무시된다. 생산자가 메서드를 나가면 그것은 객체의 락을 해제한다.
+
+동기화 wait(), notify() 메커니즘은 자바의 시작부터 있었다. 그러나, 최근의 버전은 더욱 유연하고 견고한 메커니즘을 제공한다.
+
+```java
+public class BoundedBuffer<E>
+{
+    private static final int BUFFER_SIZE = 5;
+
+    private int count, in, out;
+    private E[] Buffer;
+
+    public BoundedBuffer(){
+        count = 0;
+        int =0;
+        out = 0;
+        buffer = (E[]) new Object[BUFFER_SIZE];
+    }
+
+    public synchronized void insert(E item){
+        while(count == BUFFER_SIZE){
+            try {
+                wait();
+            }
+            catch (InterruptedException ie) { }
+        }
+        buffer[in] = item;
+        in = (in+1) % BUFFER_SIZE;
+        count++;
+
+        notify();
+    }
+
+    public synchronized void E remove(){
+        E item;
+
+        While(count == 0){
+            try {
+                wait();
+            }
+            catch(Interrupted Exception ie) { }
+        }
+
+        item = buffer[out];
+        out = (out+1) % BUFFER_SIZE;
+        count--;
+
+        notify();
+
+        return item;
+    }
+}
+```
+
+### 7.4.2 Reentrant Locks
+
+아마도 자바 API에서 가장 간단한 락킹 메커니즘은 Reentrant-Lock일 것이다. 많은 방식으로, ReentrantLock은 동기화도구이다. ReentrantLock은 단일 스레드에게 소유되고 상호배제 접근을 공유 리소스에 대해서 제공한다. 그러나 ReentrantLock은 몇가지 추가적인 기능을 제공하는데, 가장 길게 기다린 스레드를 선호하도록 보장하는 *fairness* 파라미터이다.
+
+스레드는 ReentrantLock을 lock() 메서드를 획득함으로서 실행한다. 만약 락이 존재하거나 만약 스레드가 이미 lock()을 실행해서, 그것이 *reentrant* 락이라고 불린다. 이것은 스레드 락 권한을 실행을 할당하고 컨트롤을 반환한다. 만약 락이 없으면, 실행된 스레드는 락을 가진 스레드가 unlock()해서 락을 할당 받을떄까지 블락한다. ReentrantLock은 Lock 인터페이스에서 구현된다.
+```java
+Lock key = new ReentrantLock();
+
+key.lock();
+try{
+    /* critical section */
+}
+finally {
+    key.unlock();
+}
+```
+
+try와 finally를 사용하는 것은 약간 설명이 필요할 것이다. 만약 락을 lock() 메서드로 획득하면, 그것은 락이 비슷하게 해제되는 것이 중요하다. finally 구문으로 unlock()을 감싸므로서, 우리는 락이 임계영역이 완료되거나 try 구문이 예외를 일으키면 락이 해제되게 한다. 우리는 lock()을 try구문에 두지 않았고, 락은 아무런 예외도 실행시키지 않기 때문이다. 만약 lock()를 try에 두게되면, 확인 되지 않은 예외가 lock()에서 생성된다(OutofMemoryError). 그러면 finally 구문이 unlock()을 부르고, 락은 획득된적 없기에 IllegalMonitorStateException을 일으킨다. 이 예외는 lock()이 언제 일어났는지 모를때 생기고, 이해하기 힘든 프로그램 종료를 만든다.
+
+ReentrantLock은 상호 배제를 제공하고, 만약 다양한 스레드가 오직 일고, 쓰지 않으면 보수적인 전략이다. 이런 니드를 해결하기 위해서 자바 API는 ReentrantReadWriteLock을 제공하기도 한다.
+
+### 7.4.3 Semaphores
+
+자바 API는 세마포를 제공한다. 세마포의 생성자는 `Semaphore(int value);`이다. acquire() 메서드는 InterruptedException을 만약 스레드 획득중에 인터럽트를 일으키면 던진다. 다음 예시는 상호배제를 위한 세마포의 사용이다.
+
+```java
+
+Semaphore sem = new Semaphore(1);
+
+try{
+    sem.acquire();
+    /* critical section */
+}
+catch (InterruptedExcption ie) { }
+finally {
+    sem.release();
+}
+```
+어기서 우리는 release 콜을 finally 구문에서 했다는 것을 알아둬야한다.
+
+### 7.4.4 Condition Variables.
+
+자바 API에서 다룰 마지막 기능은 컨디션 변수이다. ReentrantLock과 비슷하게, 컨디션 변수는 wait()와 notify() 메서드를 제공한다. 그러므로, 상호배제를 제공하기 위해서, 컨디션 변수는 reentrant lock과 연관되어야한다.
+
+우리는 먼저 ReentrantLock()을 만들고 newCondition() 메서드를 호출한다.(reentrantlock과 관련있는 컨디션 오브젝트이다.) 다음과 같이 구현된다.
+```java
+Lock key = new ReentrantLock();
+Condition condVar = key.newCondition();
+```
+한번 컨디션 변수가 획득되면, 우리는 await()와 signal() 메서드를 실행가능하게되고 wait()와 signal()의 기능과 같다.(6.7절)
+
+6.7절의 모니터를 다시 생각하면, wait()와 signal() 명령어는 *named* 컨디션 변수에 적용되고, 스레드가 특정상황에서 기다리고 특정 상황이 완료되면 실행하게 허용한다. 각 자바 모니터는 한가지 unnamed 컨디션 변수와 연관되고 wait()와 notify() 명령어는 단일 컨디션 변수에 적용된다. 자바 스레드가 notify()로 깨어나면, 그것은 그것이 왜 깨어났는지에 대한 정보는 없다.; 그것은 그것이 기다리는 컨디션이 만족되었는지만 체크하기 때문이다. 컨디션 변수는 특정 스레드가 알려지는 것을 허용함으로서 이를 해결한다.
+
+```java
+/* threadNumber is the thread that wishes to do some work */
+public void doWork(int threadNumber)
+{
+    lock.lock();
+
+    try{
+        if (threadNumber != turn) condVars[threadNumber].await();
+    /* Do some work for awhile */
+
+        turn = (turn+1)%5;
+        condVars[turn].signal();
+    }
+    catch(InterruptedException ie) { }
+    finally {
+        lock.unlock();
+    }
+}
+```
+우리는 다음 예제로 설명하겠다. 5개의 스레드가 있고, turn이라는 어떤 스레드의 차례인지 알리는 공유 변수가 있다. 한번 스레드가 일을 원하면 그것은 doWork() 메서드를 호출하고 그것의 스레드 번호를 넘긴다. 오직 threadNumber의 값이 turn과 일치해야지만 진행된다. 다른 스레드들은 그들의 turn을 기다려야만 한다.
+
+우리는 반드시 ReentrantLock과 5개의 컨디션 변수를 다음 차례인 스레드에게 시그널하기 위해서 만들어야한다.
+```java
+Lock lock = new ReentrantLock();
+Condition[] condVars = new Condition[5];
+
+for(int i=0; i<5;i++) condVars[i] = lock.newCondition();
+```
+
+스레드가 doWork()에 진입하면, 그것은 만약 threadNumber와 turn이 일치 하지 않으면 await()를 실행하고, 다른 스레드에게 신호를 받으면 재시작한다. 스레드가 그것의 일을 마무리하면, 그것은 다음 차례인 스레드의 컨디션 변수에 시그널을 보낸다.
+
+doWork()가 synchronized로 선언되 필요가 없는데, 왜냐하면 ReentrantLock이 상호배제를 제공하기 때문이다. 스레드가 await()를 실행하면, 그것은 ReentrantLock을 해제하고 다른 스레드가 상호배제 락을 얻도록 해준다. 비슷하게 singal()이 실행되면 오직 컨디션 변수가 시그널 받는다. 락은 unlock()으로 해제된다.
