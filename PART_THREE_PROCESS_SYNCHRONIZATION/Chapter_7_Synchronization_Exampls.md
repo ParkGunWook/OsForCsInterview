@@ -363,3 +363,4 @@ pthread_mutex_unlock(&mutex);
 pthread_cond_signal()은 뮤텍스락을 해제하지 않는 것이 중요하다. 이것은 뮤텍스를 해제하는 pthread_mutex_unlock()의 따라오는 콜이다. 한번 뮤텍스 락이 해제되면, 시그널 받은 스레드는 뮤텍스 락의 주인이 되고 pthread_cond_wait()를 호출한 컨트롤로 돌아간다. 
 
 우리는 이 챕터에 pthreads 뮤텍스락과 컨디션 변수와 세마포에 관한 몇가지 프로그램 문제와 프로젝트를 제공했다.
+

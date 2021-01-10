@@ -157,9 +157,9 @@
 | daunting   | 주눅들게하는, 벅찬   |
 | optimistic   | 낙관적인   |
 | subtle   | 미묘한   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| opaque   | 불투명한   |
+| descriptor   | 기술어   |
+| clause   | 조항|
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
