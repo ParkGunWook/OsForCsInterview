@@ -160,11 +160,11 @@
 | opaque   | 불투명한   |
 | descriptor   | 기술어   |
 | clause   | 조항|
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| obscure   | 이해하기 힘든   |
+| coherent   |  일관성있는   |
+| prompted   | 자극하다   |
+| imperative   | 반드시 해야하는   |
+| backoff | 물러서다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
