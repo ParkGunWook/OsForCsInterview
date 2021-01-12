@@ -42,11 +42,11 @@
 | errant   | 잘못된   |
 | nevertheless   | 그럼에도 불구하고   |
 | primitive   | 기초요소   |
-| hinge on   | 전적으로 달려있다.   |
 | archival   | 기록   |
 | coherence   | 일관성   |
 | peculiarity   | 기벽   |
 | relinquish   | 포기하다.   |
+| hinge on   | 전적으로 달려있다.   |
 | prone to   | ~하는 경향이 있는   |
 | parlance   | 말투   |
 | emulation   | 모방   |
@@ -165,8 +165,8 @@
 | prompted   | 자극하다   |
 | imperative   | 반드시 해야하는   |
 | backoff | 물러서다.   |
-| Content   | Content   |
-| Content   | Content   |
+| outline   | 개요를 말하다.   |
+| viable   | 실행 가능한   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
