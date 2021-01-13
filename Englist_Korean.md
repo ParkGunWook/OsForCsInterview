@@ -167,7 +167,7 @@
 | backoff | 물러서다.   |
 | outline   | 개요를 말하다.   |
 | viable   | 실행 가능한   |
-| Content   | Content   |
+| pertain   | 존재하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |

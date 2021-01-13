@@ -13,3 +13,7 @@
 ## Reentrant lock에 대한 다시 이해
 
 ## What is Imperative language(procedual)
+
+## How functional language disallow mutable state(no issues such as race condition/deatlock)
+
+## Why cycle detection algorithm is n^2? hare and tortoise?
