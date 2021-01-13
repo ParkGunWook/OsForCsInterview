@@ -168,7 +168,7 @@
 | outline   | 개요를 말하다.   |
 | viable   | 실행 가능한   |
 | pertain   | 존재하다   |
-| Content   | Content   |
+| cripple   | 불구로 만들다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
