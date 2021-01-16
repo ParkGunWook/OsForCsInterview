@@ -169,9 +169,9 @@
 | viable   | 실행 가능한   |
 | pertain   | 존재하다   |
 | cripple   | 불구로 만들다   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| pertinent   | 적절한   |
+| intolerance   | 편협적인   |
+| intervene   | 개입하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |

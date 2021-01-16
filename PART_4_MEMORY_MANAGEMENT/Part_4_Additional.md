@@ -3,3 +3,5 @@
 ## 트랜잭션이 뭔데?
 
 ## What is process' context
+
+## What is routine??(운영체제의 Library routine으로 접근)
