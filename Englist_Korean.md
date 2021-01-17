@@ -172,11 +172,11 @@
 | pertinent   | 적절한   |
 | intolerance   | 편협적인   |
 | intervene   | 개입하다   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| shuffle   | 이리저리 움직이다   |
+| ramification   | 파문   |
+| minuscule   | 극소의   |
+| coincide   | 일치하다, 동시에 일어나다.   |
+| reconcile   | 조화시키다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
