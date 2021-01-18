@@ -177,9 +177,9 @@
 | minuscule   | 극소의   |
 | coincide   | 일치하다, 동시에 일어나다.   |
 | reconcile   | 조화시키다.  |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| daunting   | 벅차다   |
+| prohibitive | 엄두도 못낼   |
+| sparse   | 드문   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
