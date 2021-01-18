@@ -176,7 +176,7 @@
 | ramification   | 파문   |
 | minuscule   | 극소의   |
 | coincide   | 일치하다, 동시에 일어나다.   |
-| reconcile   | 조화시키다.   |
+| reconcile   | 조화시키다.  |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
