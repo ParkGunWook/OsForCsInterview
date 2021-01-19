@@ -180,7 +180,7 @@
 | daunting   | 벅차다   |
 | prohibitive | 엄두도 못낼   |
 | sparse   | 드문   |
-| Content   | Content   |
+| perceive   | 감지하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
