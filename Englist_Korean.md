@@ -181,7 +181,7 @@
 | prohibitive | 엄두도 못낼   |
 | sparse   | 드문   |
 | perceive   | 감지하다   |
-| Content   | Content   |
+| strain   | 부담   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
