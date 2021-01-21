@@ -182,10 +182,10 @@
 | sparse   | 드문   |
 | perceive   | 감지하다   |
 | strain   | 부담   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| anomaly   | 변칙   |
+| feasible   | 실현 가능한   |
+| conceivable   | 상상할 수 있는   |
+| degenerate | 악화하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
