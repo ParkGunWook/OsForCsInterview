@@ -186,9 +186,9 @@
 | feasible   | 실현 가능한   |
 | conceivable   | 상상할 수 있는   |
 | degenerate | 악화하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| straddle   | 가로지르다   |
+| detriment   | 손상시키다.   |
+| hinder   | 저해하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
