@@ -189,9 +189,9 @@
 | straddle   | 가로지르다   |
 | detriment   | 손상시키다.   |
 | hinder   | 저해하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| plunge   | 거꾸러지다.   |
+| encompass   | 어우르다.   |
+| clumsy | 서투른   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
