@@ -11,3 +11,5 @@
 ## 페이지 테이블이 각 프로세스마다 나오면 페이지는 0~5이런식으로 중복갑이 많은 것인데, TLB는 공유되지 않는 페이지 넘버를 어떻게 해석할까?
 
 ## What is buffering in 10.4.8??
+
+## What is Xpress and WKdm algorithm
