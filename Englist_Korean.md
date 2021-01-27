@@ -192,11 +192,11 @@
 | plunge   | 거꾸러지다.   |
 | encompass   | 어우르다.   |
 | clumsy | 서투른   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| integral   | 필수적인   |
+| coalesce   | 합치다.   |
+| argue for   | 찬성하다   |
+| meanwhile   | 그 동안에   |
+| pinned   | 핀으로 고정된   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
