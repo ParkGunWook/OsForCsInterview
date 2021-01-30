@@ -197,19 +197,19 @@
 | argue for   | 찬성하다   |
 | meanwhile   | 그 동안에   |
 | pinned   | 핀으로 고정된   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| platter | 접시   |
+| concentric   | 동심원의, 중심이 같은   |
+| chassis   | 샤시   |
+| die   | 금형   |
+| ameliorating   | 개선하다   |
+| set aside   | 한쪽으로 치워두다   |
+| carve out   | 개척하다   |
+| vagary   | 예상 밖의 변화   |
+| entail   | 수반하다   |
+| timeliness   | 시기적절성   |
+| intrinsically   | 본질적으로   |
+| seamless | 매끄러운   |
+| offload   | 없애다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
