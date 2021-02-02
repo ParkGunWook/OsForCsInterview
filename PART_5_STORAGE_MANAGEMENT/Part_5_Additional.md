@@ -18,3 +18,4 @@
 
 ## Problem with RAID When RAID is one set.(What is voluem mean?)
 
+## 12 chap's handshaking????
