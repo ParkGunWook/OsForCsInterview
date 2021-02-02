@@ -210,15 +210,15 @@
 | intrinsically   | 본질적으로   |
 | seamless | 매끄러운   |
 | offload   | 없애다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| peril   | 위험   |
+| checksum   | 검사용 합계   |
+| quota   | 한도   |
+| commodity   | 상업용   |
+| oddity   | 이상함   |
+| rudder   | 방향타   |
+| flap   | 퍼덕거리다.   |
+| nomenclature   | 명명법   |
+| intricate | 복잡한   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
