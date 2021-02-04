@@ -219,8 +219,8 @@
 | flap   | 퍼덕거리다.   |
 | nomenclature   | 명명법   |
 | intricate | 복잡한   |
-| Content   | Content   |
-| Content   | Content   |
+| comparator   | 비교측정기   |
+| interim   | 중간의   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
