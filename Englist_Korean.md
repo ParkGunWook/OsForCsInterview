@@ -221,12 +221,12 @@
 | intricate | 복잡한   |
 | comparator   | 비교측정기   |
 | interim   | 중간의   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| cope with   | 대처하다.   |
+| instantaneous   | 즉각적인   |
+| decouple   | 분리하다.   |
+| transient   | 일시적이   |
+| quiesce   | 작업거부   |
+| full duplex   | 전이중 통신방식   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
