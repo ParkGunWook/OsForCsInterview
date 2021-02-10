@@ -229,11 +229,11 @@
 | full duplex   | 전이중 통신방식   |
 | persistent   | 끊임없는   |
 | allotment   | 할당   |
-| confine   | 범위   |
+| confine   | 범위, 국한시키다   |
 | piecemeal   | 단편적인   |
 | akin   | ~와 유사한   |
 | cumbersome   | 다루기 힘든 |
-| Content   | Content   |
+| ascertain   | 알아내다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
