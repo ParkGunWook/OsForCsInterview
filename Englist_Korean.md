@@ -234,10 +234,10 @@
 | akin   | ~와 유사한   |
 | cumbersome   | 다루기 힘든 |
 | ascertain   | 알아내다   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| dangling   | 애타게하다.   |
+| tedious   | 지루한   |
+| condense   | 농축되다   |
+| opt to   | ~하기로 선택하다 |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
