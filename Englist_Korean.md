@@ -238,7 +238,7 @@
 | tedious   | 지루한   |
 | condense   | 농축되다   |
 | opt to   | ~하기로 선택하다 |
-| Content   | Content   |
+| delve   | 뒤지다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
