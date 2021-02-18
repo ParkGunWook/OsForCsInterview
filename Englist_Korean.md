@@ -239,8 +239,8 @@
 | condense   | 농축되다   |
 | opt to   | ~하기로 선택하다 |
 | delve   | 뒤지다   |
-| Content   | Content   |
-| Content   | Content   |
+| flux   | 변화   |
+| irreparable   | 회복할 수 없는   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
