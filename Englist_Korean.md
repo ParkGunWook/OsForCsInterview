@@ -241,8 +241,8 @@
 | delve   | 뒤지다   |
 | flux   | 변화   |
 | irreparable   | 회복할 수 없는   |
-| Content   | Content   |
-| Content   | Content   |
+| span   | 거치다   |
+| segregate   | 분리하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
