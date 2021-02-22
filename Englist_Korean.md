@@ -243,8 +243,8 @@
 | irreparable   | 회복할 수 없는   |
 | span   | 거치다   |
 | segregate   | 분리하다.   |
-| Content   | Content   |
-| Content   | Content   |
+| preeminent   | 탁월한   |
+| resiliency   | 탄성   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
