@@ -245,11 +245,11 @@
 | segregate   | 분리하다.   |
 | preeminent   | 탁월한   |
 | resiliency   | 탄성   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| forged   | 단조한   |
+| immutable   | 불변하는   |
+| interwind   | 얽혀있다.   |
+| accreditation | 승인   |
+| idempotence   | 멱등법칙   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
