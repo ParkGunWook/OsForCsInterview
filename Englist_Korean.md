@@ -250,7 +250,7 @@
 | interwind   | 얽혀있다.   |
 | accreditation | 승인   |
 | idempotence   | 멱등법칙   |
-| Content   | Content   |
+| query   | 문의하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
