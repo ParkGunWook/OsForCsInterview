@@ -251,9 +251,9 @@
 | accreditation | 승인   |
 | idempotence   | 멱등법칙   |
 | query   | 문의하다.   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| canonical   | 고전으로 느껴지는   |
+| untenable   | 방어할 수 없는   |
+| eavesdrop   | 감청하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
