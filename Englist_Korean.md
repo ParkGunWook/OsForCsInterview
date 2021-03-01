@@ -254,8 +254,8 @@
 | canonical   | 고전으로 느껴지는   |
 | untenable   | 방어할 수 없는   |
 | eavesdrop   | 감청하다   |
-| Content   | Content   |
-| Content   | Content   |
+| congestion   | 혼잡   |
+| facilitate   | 가능하게하다   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
