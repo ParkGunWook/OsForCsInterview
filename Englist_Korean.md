@@ -256,9 +256,9 @@
 | eavesdrop   | 감청하다   |
 | congestion   | 혼잡   |
 | facilitate   | 가능하게하다   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| aggregate   | 종합하다.   |
+| exploit   | 이용하다.   |
+| crux   | 중요한 부분    |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
