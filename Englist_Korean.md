@@ -259,11 +259,11 @@
 | aggregate   | 종합하다.   |
 | exploit   | 이용하다.   |
 | crux   | 중요한 부분    |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
-| Content   | Content   |
+| culminate   | 끝이 나다   |
+| de facto   | 사실상의   |
+| waive   | 포기하다.   |
+| resemble   | 닮다.   |
+| monolithic   | 하나로 구성된   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
