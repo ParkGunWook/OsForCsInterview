@@ -264,8 +264,8 @@
 | waive   | 포기하다.   |
 | resemble   | 닮다.   |
 | monolithic   | 하나로 구성된   |
-| Content   | Content   |
-| Content   | Content   |
+| verbatim   | 말그대로   |
+| arbitrate   | 중재하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
