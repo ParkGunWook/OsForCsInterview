@@ -266,8 +266,8 @@
 | monolithic   | 하나로 구성된   |
 | verbatim   | 말그대로   |
 | arbitrate   | 중재하다.   |
-| Content   | Content   |
-| Content   | Content   |
+| usher  | 안내하다.   |
+| allot   | 할당하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
