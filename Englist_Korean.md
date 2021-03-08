@@ -268,8 +268,8 @@
 | arbitrate   | 중재하다.   |
 | usher  | 안내하다.   |
 | allot   | 할당하다.   |
-| Content   | Content   |
-| Content   | Content   |
+| analogous   | 유사한   |
+| commence   | 시작하다.   |
 | Content   | Content   |
 | Content   | Content   |
 | Content   | Content   |
